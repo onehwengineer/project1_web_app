@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .content {
+        height: 100%;
+        margin: 0;
+        padding: 0; 
+      }
+      .map-box {
+        height: 70%;
+        padding: 20px;
+      }
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+        <span> So you want to eat out, but not sure where to go? </span> <br>
+        <span> Tell us how you feel, and we'll suggest ONE restaurant for you! </span> <br>
+        <span> How to feel? </span> <br>
+        <select id="dropdown">
+            <option value="none" selected disabled hidden> Select </option> 
+            <option value="angry">Angry</option>
+            <option value="calm">Calm</option>
+            <option value="hung_over">Hung-Over</option>
+            <option value="sad">Sad</option>
+        </select>
+        <br>
+        <span> Where are you? Click on the map. </span> <br>
+        <div class="map-box">
+            <div id="map"></div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    
+    <!-- MY JS -->
+    <script type="text/javascript" src="index.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap">
+
+    </script>
+  </body>
+</html>
